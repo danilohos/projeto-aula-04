@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap');
+ /*Variaveis em css*/
+:root{
+    --bgcolor: #000;
+    --decopri: #b28756;
+    --corfont: #fff;
+    --menusale: #c2bdbd;
+}   
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    height: 100px;
+    background-color: var(--bgcolor);
+    color: var(--corfont);
+}
+
+.header{
+    max-width: 1140px;
+    height: 100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    width: 100px;
+}
+
+.logoimg{
+    width: 80px;
+    height: 80px;
+    background-image: url("../image/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu{
+    flex: 1; /*isso ocupa o espaço que sobrou*/
+    display:flex;
+    justify-content: flex-end;
+}
+
+.menu ul,
+.menu li{
+    list-style: none;
+}
+
+.menu ul{
+    display: flex;
+}
+
+.menu li a{
+    color: var(--corfont);
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none; /*tira o sublinhado*/
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    border-bottom: 5px solid var(--bgcolor);
+}
+
+.menu li a:hover{
+    border-bottom: 5px solid var(--decopri);
+    color: var(--menusale);
+}
+.active{
+    border-bottom: 5px solid var(--decopri);
+}
